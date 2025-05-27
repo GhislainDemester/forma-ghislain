@@ -21,7 +21,7 @@ jobs:
           npm install
           npm test
 
-  docker-build:
+  build-docker:
     needs: run-npm-install
     runs-on: ubuntu-latest
     steps:
