@@ -1,0 +1,9 @@
+name: ex3 use reusable
+on:
+  workflow_dispatch:
+
+jobs:
+  run-npm-test:
+    uses: GhislainDemester/forma-ghislain/.github/workflows/reusable_ex3.yaml@main
+    with:
+      node-version: 'lts/*'
