@@ -12,7 +12,7 @@ jobs:
       - name: display sha
         id: sha
         run: |
-          echo "small_sha=${GITHUB_SHA::7}" >> $GITHUB_OUTPUT
+          echo "small_sha=${GITHUB_SHA::7}" >> $GITHUB_ENV
 
       - name: Create issue using REST API
         run: |
@@ -21,8 +21,8 @@ jobs:
           --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
           --header 'content-type: application/json' \
           --data '{
-            "title": "Automated issue for commit: ${{ steps.sha.outputs.small_sha }}",
-            "body": "This issue was automatically created by the GitHub Action workflow **${{ github.workflow }}**. \n\n The commit hash was: _${{ steps.sha.outputs.small_sha }}_."
+            "title": "Automated issue for commit: ${{ env.small_sha }}",
+            "body": "This issue was automatically created by the GitHub Action workflow **${{ github.workflow }}**. \n\n The commit hash was: _${{ env.small_sha }}_."
             }' \
           --fail
 
