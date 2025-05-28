@@ -8,6 +8,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: npm install
-      - run: npm run prepare
+
+      - name: Install action dependencies
+        run: npm install
+        working-directory: .github/actions/warning_ex3
+
+      - name: Build the action (prepare)
+        run: npm run prepare
+        working-directory: .github/actions/warning_ex3
+
+
       - uses: ./.github/actions/warning_ex3
