@@ -1,5 +1,8 @@
 name: Test the Lab 1 of Code
-on: push
+on:
+  push:
+    branches:
+      - master
 jobs:
   test-syntax-lab1:
     runs-on: ubuntu-latest

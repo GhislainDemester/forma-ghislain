@@ -1,0 +1,19 @@
+name: COWSAY Test the Lab 2 of Code
+on:
+  push:
+    branches:
+      - main
+jobs:
+  test-syntax-lab2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: upper_action
+        uses: ./.github/actions/cowsay_ex2
+        with:
+          text: GitHub Action Rocks
+
+      # Check the Job summary to see the notice message
+      - run: |
+          echo "::notice ::${{ steps.upper_action.outputs.upper_text }}"
