@@ -1,0 +1,21 @@
+name: Test the Lab 1 of Code
+on: push
+jobs:
+  test-syntax-lab1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+#      - name: default run
+#        uses: ./.github/actions/cowsay_ex1/action.yaml
+
+      - name: custom run with mandatory input
+        uses: ./.github/actions/cowsay_ex1/action.yaml
+        with:
+          say: GitHub Action Rocks
+
+#      - name: custom run with all inputs
+#        uses: ./.github/actions/cowsay_ex1/action.yaml
+#        with:
+#          say: GitHub Action Rocks
+#          eyes: o-
