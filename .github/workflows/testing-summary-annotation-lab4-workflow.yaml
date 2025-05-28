@@ -2,7 +2,7 @@ name: Warning Test the Lab 3 of Code
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   test-interactions-lab1:
     runs-on: ubuntu-latest
