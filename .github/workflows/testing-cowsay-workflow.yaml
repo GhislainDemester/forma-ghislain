@@ -10,7 +10,7 @@ jobs:
 #        uses: ./.github/actions/cowsay_ex1/action.yaml
 
       - name: custom run with mandatory input
-        uses: ./.github/actions/cowsay_ex1/action.yaml
+        uses: ./.github/actions/cowsay_ex1
         with:
           say: GitHub Action Rocks
 
