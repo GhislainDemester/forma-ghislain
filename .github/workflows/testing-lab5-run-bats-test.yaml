@@ -1,0 +1,17 @@
+name: Warning Test the Lab 3 of Code
+on:
+  push:
+    branches:
+      - master
+jobs:
+  test-testing-lab1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: bats test
+        run: |
+          ${GITHUB_WORKSPACE}/tests/bats/bin/bats ${GITHUB_WORKSPACE}/tests/lab-testing-with-bats/lab-tests.bats
+        shell: bash
