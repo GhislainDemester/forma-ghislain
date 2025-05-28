@@ -2,7 +2,7 @@ name: COWSAY Test the Lab 2 of Code
 on:
   push:
     branches:
-      - main
+      - master
 jobs:
   test-syntax-lab2:
     runs-on: ubuntu-latest
