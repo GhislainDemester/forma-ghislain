@@ -1,4 +1,4 @@
-name: Test the Lab 1 of Reuse
+name: lab 6 reuse maintainability
 on:
   push:
     branches:
