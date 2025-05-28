@@ -1,8 +1,5 @@
 name: lab 6 reuse maintainability
-on:
-  push:
-    branches:
-      - main
+on: pull_request
 jobs:
   check-section1:
     runs-on: ubuntu-latest
