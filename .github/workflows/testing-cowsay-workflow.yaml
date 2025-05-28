@@ -6,16 +6,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-#      - name: default run
-#        uses: ./.github/actions/cowsay_ex1/action.yaml
+      - name: default run
+        uses: ./.github/actions/cowsay_ex1
 
       - name: custom run with mandatory input
         uses: ./.github/actions/cowsay_ex1
         with:
           say: GitHub Action Rocks
 
-#      - name: custom run with all inputs
-#        uses: ./.github/actions/cowsay_ex1/action.yaml
-#        with:
-#          say: GitHub Action Rocks
-#          eyes: o-
+      - name: custom run with all inputs
+        uses: ./.github/actions/cowsay_ex1
+        with:
+          say: GitHub Action Rocks
+          eyes: o-
